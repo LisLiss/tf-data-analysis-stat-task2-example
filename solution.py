@@ -12,6 +12,6 @@ def solution(p: float, x: np.array) -> tuple:
     # Не меняйте название функции и её аргументы
     alpha = 1 - p
     loc = x.mean()
-    left = 2/1225 * (loc + 1/2 - norm.ppf(1 - alpha / 2) / math.sqrt(len(x)))
-    right = 2/1225 * (loc + 1/2 - norm.ppf(alpha / 2) / math.sqrt(len(x)))
+    left = 2/1225 * (loc + 1/2 - norm.ppf(1 - alpha / 2) / np.sqrt(len(x)))
+    right = 2/1225 * (loc + 1/2 - norm.ppf(alpha / 2) / np.sqrt(len(x)))
     return left, right
